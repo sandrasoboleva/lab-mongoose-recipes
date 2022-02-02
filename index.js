@@ -26,7 +26,7 @@ mongoose
 //Iteration 2
 
   let oneRecipe = {
-    title: "Asian Glazed Chicken Thighs",
+    title: "Glazed Chicken Thighs",
     level: "Amateur Chef",
     ingredients: [
       "1/2 cup rice vinegar",
@@ -45,16 +45,16 @@ mongoose
     creator: "Chef LePapu"
   }
 
-  // Recipe.create(oneRecipe)
-  // .then((response) =>{
-  //   console.log(`${response.title}`);
-  // })
-  // .catch((err) => {
-  //   console.log("Something went wrong", err);
-  // })
-  // .finally(() => {
-  //   mongoose.connection.close();
-  // });
+  Recipe.create(oneRecipe)
+  .then((response) =>{
+    console.log(`${response.title}`);
+  })
+  .catch((err) => {
+    console.log("Something went wrong", err);
+  })
+  .finally(() => {
+    mongoose.connection.close();
+  });
 
   //Iteration 3
 
